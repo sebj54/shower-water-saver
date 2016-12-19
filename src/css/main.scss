@@ -1,0 +1,159 @@
+@import "~normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700');
+
+:root {
+    --accent-color: #1446a0;
+    --lighten-color: #08b2e3;
+    --light-color: #efe9f4;
+    --danger-color: #db3069;
+    --text-color: #484d6d;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: currentColor;
+    font-family: Dosis, sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--light-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 6px 6px rgba(0, 0, 0, .15);
+}
+
+.app-title {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.infos-container {
+    min-width: 70%;
+}
+
+.infos {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+    font-size: 1.5em;
+}
+
+.info-label,
+.info-value {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.info-label {
+    flex-grow: 1;
+    margin-right: 2rem;
+}
+
+.info-label::after {
+    content: " :";
+}
+
+.info-value {
+    font-size: 1.2em;
+}
+
+.info-value.-actual {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--lighten-color);
+}
+
+.info-value.-average {
+}
+
+.info-value.-average::before {
+    content: " / ";
+}
+
+.progress {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress > svg {
+}
+
+.progress > svg path {
+    stroke-dasharray: 1509;
+    stroke-dashoffset: 1509;
+    stroke-dashoffset: 650;
+}
+
+.shower-illustration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, -50%) translate(12%, 8%);
+}
+
+.shower-water,
+.shower-bubble {
+    fill: var(--lighten-color);
+}
+
+.multiplicator {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    border-width: 0;
+    border-radius: 50%;
+    background-color: var(--danger-color);
+    box-shadow: none;
+    text-align: center;
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.multiplicator::before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 5rem;
+}
+
+.license {
+    text-align: center;
+    font-weight: 300;
+    font-size: .8em;
+}
+
+.license p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
