@@ -1,6 +1,10 @@
 {
     "name": "shower-water-saver",
     "version": "0.0.0",
+    "scripts": {
+        "start": "npm run lite",
+        "lite": "lite-server"
+    },
     "description": "Shower water saver app",
     "main": "js/global.js",
     "repository": {
@@ -14,5 +18,23 @@
     },
     "dependencies": {
         "normalize.css": "~5.0.0",
+        "@angular/common": "~2.4.0",
+        "@angular/compiler": "~2.4.0",
+        "@angular/core": "~2.4.0",
+        "@angular/forms": "~2.4.0",
+        "@angular/http": "~2.4.0",
+        "@angular/platform-browser": "~2.4.0",
+        "@angular/platform-browser-dynamic": "~2.4.0",
+        "@angular/router": "~3.4.0",
+        "@angular/upgrade": "~2.4.0",
+
+        "angular-in-memory-web-api": "~0.2.4",
+        "core-js": "^2.4.1",
+        "rxjs": "5.0.1",
+        "zone.js": "^0.7.4"
+    },
+    "devDependencies": {
+        "concurrently": "^3.0.0",
+        "lite-server": "^2.2.2"
     }
 }
