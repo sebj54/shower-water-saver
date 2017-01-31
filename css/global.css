@@ -92,10 +92,10 @@ body {
     color: var(--danger-color);
 }
 
-.info-value.-average {
+.info-value.-objective {
 }
 
-.info-value.-average::before {
+.info-value.-objective::before {
     content: " / ";
 }
 
