@@ -111,4 +111,4 @@ var showerSaver = {
     }
 }
 
-document.addEventListener('DOMContentLoaded', showerSaver.init)
+// document.addEventListener('DOMContentLoaded', showerSaver.init)
