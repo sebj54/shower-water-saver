@@ -1,18 +1,19 @@
 {
-    "name": "shower-water-saver",
-    "version": "0.0.0",
-    "description": "Shower water saver app",
-    "main": "js/global.js",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/sebj54/shower-water-saver.git"
-    },
-    "author": "sebj54",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/sebj54/shower-water-saver/issues"
-    },
-    "dependencies": {
-        "normalize.css": "~5.0.0",
-    }
+  "name": "shower-water-saver",
+  "version": "0.0.0",
+  "description": "Shower water saver app",
+  "main": "js/global.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sebj54/shower-water-saver.git"
+  },
+  "author": "sebj54",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebj54/shower-water-saver/issues"
+  },
+  "dependencies": {
+    "normalize.css": "~5.0.0",
+    "vue": "^2.1.10"
+  }
 }
