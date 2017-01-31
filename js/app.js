@@ -41,7 +41,7 @@ var app = {
                 {
                     data = JSON.parse(xhr.responseText)
                 }
-                finally
+                catch (e)
                 {
                     data = xhr.responseText
                 }
@@ -63,11 +63,13 @@ var app = {
     },
 
     /**
-     * Get a template from a path
-     * @param  {string} path Template path
+     * Get a template from a name
+     * @param  {string} name Template name
      */
-    resolveTemplate: function(path, component)
+    resolveTemplate: function(name, component)
     {
+        var path = 'views/' + name + '.html'
+
         if (!component)
         {
             component = {}
