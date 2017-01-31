@@ -1,4 +1,4 @@
-Vue.component('counter', app.resolveTemplate('counter', {
+Vue.component('shower-counter', app.resolveTemplate('counter', {
     data: function()
     {
         return {
