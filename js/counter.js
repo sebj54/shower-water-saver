@@ -2,19 +2,22 @@ Vue.component('shower-counter', app.resolveTemplate('counter', {
     data: function()
     {
         return {
-            time: {
-                actual: 0,
-                objective: 492
-            },
-            consumption: {
-                actual: 0,
-                objective: 65.1
-            },
-            flowRate: 0.13167,
-            actualProgress: 0
+            time: tracker.time,
+            flowRate: 0.13167
         }
     },
     computed: {
+        consumption: function()
+        {
+            return {
+                actual: this.getConsumption(this.time.actual),
+                objective: this.getConsumption(this.time.objective)
+            }
+        },
+        actualProgress: function()
+        {
+            return tracker.actualProgress
+        },
         actualTime: function()
         {
             return this.formatTime(this.time.actual)
@@ -33,6 +36,11 @@ Vue.component('shower-counter', app.resolveTemplate('counter', {
         }
     },
     methods: {
+        getConsumption: function(time)
+        {
+            return time * this.flowRate
+        },
+
         formatTime: function(time)
         {
             var seconds = time % 60
