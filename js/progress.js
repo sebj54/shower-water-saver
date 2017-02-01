@@ -2,8 +2,6 @@ Vue.component('shower-progress', app.resolveTemplate('progress', {
     data: function()
     {
         return {
-            time: tracker.time,
-            isStarted: false,
             progressLength: 0
         }
     },
@@ -18,42 +16,7 @@ Vue.component('shower-progress', app.resolveTemplate('progress', {
         }
     },
     methods: {
-        reset: function()
-        {
-            this.time.actual = 0
-        },
-
-        update: function()
-        {
-            this.time.actual += tracker.multiplicator / 100
-        },
-
-        start: function()
-        {
-            this.reset()
-            this.isStarted = true
-
-            this.interval = setInterval(this.update, 10)
-        },
-
-        stop: function()
-        {
-            this.isStarted = false
-            clearInterval(this.interval)
-            this.interval = null
-        },
-
-        toggle: function()
-        {
-            if (this.isStarted)
-            {
-                this.stop()
-            }
-            else
-            {
-                this.start()
-            }
-        }
+        toggle: tracker.toggle
     },
     mounted: function()
     {
