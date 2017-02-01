@@ -8,6 +8,8 @@
     --light-color: #efe9f4;
     --danger-color: #db3069;
     --text-color: #484d6d;
+
+    --danger-color-darken: #b5305d;
 }
 
 html {
@@ -20,6 +22,54 @@ body {
     font-size: 1.6rem;
     color: var(--text-color);
 }
+
+button {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    border-width: 0;
+    border-radius: .3rem;
+    background-color: var(--danger-color);
+    box-shadow: 0 6px var(--danger-color-darken);
+    text-align: center;
+    font-family: inherit;
+    color: var(--light-color);
+    cursor: pointer;
+    transform: translateY(0);
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-in;
+    transition-duration: .2s;
+}
+
+    button:hover,
+    button:focus {
+        box-shadow: 0 4px var(--danger-color-darken);
+        transform: translateY(2px);
+    }
+
+    button:active {
+        transform: translateY(6px);
+        box-shadow: 0 0 var(--danger-color-darken);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: inherit;
+        background-color: rgba(255, 255, 255, .2);
+    }
+
+        button:focus::after {
+            content: "";
+        }
 
 .app {
     display: flex;
@@ -111,9 +161,20 @@ body {
     background-color: transparent;
 }
 
-.progress:focus {
-    outline: none;
-}
+    .progress,
+    .progress:hover,
+    .progress:focus,
+    .progress:active {
+        box-shadow: none;
+        transform: none;
+    }
+
+    .progress:focus {
+    }
+
+        .progress:focus::after {
+            content: none;
+        }
 
 .progress > svg {
 }
@@ -156,40 +217,17 @@ body {
     right: 2rem;
     width: 5rem;
     height: 5rem;
-    border-width: 0;
+    padding: 0;
     border-radius: 50%;
-    background-color: var(--danger-color);
-    box-shadow: none;
-    text-align: center;
     line-height: 1;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--light-color);
-    cursor: pointer;
-}
-
-.multiplicator:focus {
-    outline: none;
-}
-
-.multiplicator:focus::after {
-    content: "";
 }
 
 .multiplicator::before {
     display: inline-block;
     vertical-align: middle;
     height: 5rem;
-}
-
-.multiplicator::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, .2);
 }
 
 .license {
