@@ -4,7 +4,6 @@ Vue.component('shower-progress', app.resolveTemplate('progress', {
         return {
             time: tracker.time,
             isStarted: false,
-            multiplicator: 1,
             progressLength: 0
         }
     },
@@ -26,7 +25,7 @@ Vue.component('shower-progress', app.resolveTemplate('progress', {
 
         update: function()
         {
-            this.time.actual += this.multiplicator / 100
+            this.time.actual += tracker.multiplicator / 100
         },
 
         start: function()

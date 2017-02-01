@@ -2,15 +2,19 @@ Vue.component('shower-multiplicator', app.resolveTemplate('multiplicator', {
     data: function()
     {
         return {
-            multiplicator: 1,
             max: 64
+        }
+    },
+    computed: {
+        multiplicator: function()
+        {
+            return tracker.multiplicator
         }
     },
     methods: {
         upMultiplicator: function()
         {
-            this.multiplicator *= (this.multiplicator === this.max) ? 1 / this.multiplicator : 2
-            // TODO: Trigger uppedMultiplicator event
+            tracker.multiplicator *= (tracker.multiplicator === this.max) ? 1 / tracker.multiplicator : 2
         }
     }
 }))

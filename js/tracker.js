@@ -3,7 +3,8 @@ var tracker = new Vue({
         time: {
             actual: 0,
             objective: 492
-        }
+        },
+        multiplicator: 1
     },
     computed: {
         actualProgress: function()
